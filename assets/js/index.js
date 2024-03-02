@@ -21,7 +21,7 @@ const genreList = {
     }
 };
 
-fetchDataServer('https://api.themoviedb.org/3/genre/movie/list=$ {api_key}', function ({ genres }) {
+fetchDataServer(`https://api.themoviedb.org/3/genre/movie/list=${api_key}`, function ({ genres }) {
 
 for (const { id, name } of genres ) {
     genreList[id] = name;
